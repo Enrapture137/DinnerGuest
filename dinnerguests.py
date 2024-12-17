@@ -8,17 +8,17 @@ for i in range(count):
 
 input_guests = []
 
-response = input("Would you like to invite someone to dinner? ")
+response = input("Would you like to invite someone to dinner? ").lower()
 
 while True:  
     if response in ('y','yes'):
-        guests.append(input("What is their name? "))
-        response = input("Would you like to invite someone else? ")
+        guests.append(input("What is their name? ").title())
+        response = input("Would you like to invite someone else? ").lower()
     elif response in ('n', 'no'):
         break
     else:
         print("\nThat's not a yes OR a no. Try again.")
-        response = input("Would you like to invite someone to dinner? ")  
+        response = input("Would you like to invite someone to dinner? ").lower()
         continue     
     
 count = len(guests)
